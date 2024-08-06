@@ -1,0 +1,106 @@
+header > img {
+    display: block;
+    max-width: 90vw;
+    margin-inline: auto;
+}
+
+.animate-logo {
+    animation: reduceSizeImgLogoSuperior 3s ease forwards;
+}
+
+@keyframes reduceSizeImgLogoSuperior {
+    from {
+        max-height: 80vh;
+        margin-top: 10vh;
+    }
+    to {
+        max-height: 15vh;
+        margin-top: 5vh;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding-inline-start: 0px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+    margin-inline: 10px;
+    padding-inline: 15px;
+    background-color: #495e5729;
+    border-radius: 25px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;;
+}
+
+article:hover {
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }
+
+footer {
+    background-color: #495e5729;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+footer > div {
+    flex: 1;
+    text-align: center;
+}
+
+footer > div > img {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer > div p {
+    display: inline-block;
+}
+
+.textoRodape {
+    font-size: small;
+}
+
+
+nav, main, footer {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s; /* Atraso de 4 segundos para começar no último segundo da animação da imagem */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
