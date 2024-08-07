@@ -127,46 +127,6 @@ article {
     text-align: center;
 }
 
-.oferta .content img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 90px;
-}
-
-.oferta .content .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* color: #f4f4f4; */
-}
-
-@media (min-width: 768px) {
-    .oferta .content {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-    }
-
-    .oferta .content img {
-        max-width: 50%;
-        margin: 0 20px 0 0;
-        /* clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 10% 100%, 0% 90%); */
-        /* clip-path: polygon(0% 0%, 80% 0%, 100% 20%, 100% 100%, 20% 100%, 0% 80%); */
-        /* clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); */
-        border-radius: 90px;
-    }
-
-    .oferta .content .text {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
 .card-opcao {
     background-color: #d8dbda;
     border-radius: 20px;
@@ -178,6 +138,67 @@ article {
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
     cursor: pointer;
+}
+
+.oferta .content img,
+.card-opcao .content img{
+    height: auto;
+    margin: 20px;
+}
+
+.oferta .content img{
+    max-width: 100%;
+    border-radius: 90px;
+}
+
+.card-opcao .content img{
+    max-width: 80%;
+    border-radius: 25px;
+}
+
+.oferta .content,
+.card-opcao .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.oferta .content .text,
+.card-opcao .content .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    .oferta .content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .oferta .content img {
+        max-width: 50%;
+        margin: 0 20px 0 0;
+        border-radius: 90px;
+    }
+
+    .card-opcao .content img {
+        max-width: 80%;
+        margin: 0 20px;
+        border-radius: 25px;
+    }
+
+    .oferta .content .text,
+    .card-opcao .content .text{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 footer {
