@@ -104,19 +104,32 @@ section {
     margin-top: 5%;
 }
 
-.oferta {
+.oferta,
+.cardapio,
+.sobre-nos,
+.card-contato {
     width: 100%;
-    background-color: #495e57;
     border-radius: 15px;
+}
+
+.cardapio,
+.sobre-nos,
+.card-contato {
+    text-align: center;
+}
+
+.oferta {
+    background-color: #495e57;
     cursor: pointer;
 }
 
 .cardapio {
-    width: 100%;
     background-color: #050608;
-    border-radius: 15px;
-    cursor: pointer;
-    text-align: center;
+}
+
+.sobre-nos,
+.card-contato {
+    background-color: #d8dbda;
 }
 
 article {
@@ -125,11 +138,18 @@ article {
     padding-inline: 15px;
 }
 
-.oferta article {
+.oferta article,
+.oferta .content,
+.card-opcao .content,
+.oferta .content .text,
+.card-opcao .content .text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.oferta article {
     margin: 20px;
     color: #f4f4f4;
 }
@@ -144,13 +164,6 @@ article {
 
 .titulo-cardapio {
     color: #da8a2f;
-}
-
-.oferta .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .oferta .content img{
@@ -181,26 +194,10 @@ article {
     border-radius: 25px;
 }
 
-.oferta .content,
-.card-opcao .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
 .oferta .content img,
 .card-opcao .content img{
     height: auto;
     margin: 20px;
-}
-
-.oferta .content .text,
-.card-opcao .content .text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 @media (min-width: 768px) {
