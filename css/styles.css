@@ -145,6 +145,7 @@ article {
 .oferta .content .text,
 .card-opcao .content,
 .card-opcao .content .text,
+.card-contato,
 .card-contato article,
 .card-contato .content,
 .card-contato .content .text {
@@ -188,7 +189,8 @@ article {
     border-radius: 90px;
 }
 
-.cardapio img {
+.cardapio img,
+.card-contato .content img {
     max-width: 100%;
     height: auto;
 }
@@ -217,9 +219,27 @@ article {
     margin: 20px;
 }
 
-.card-contato .content img{
+.card-contato {
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card-contato .content img {
+    margin: 0 20px;
+}
+
+.card-contato .text {
     max-width: 100%;
-    height: auto;
+    padding: 20px;
+}
+
+.card-contato ul {
+    padding-inline-start: 0px;
+}
+
+.card-contato li {
+    list-style: none;
+    margin: 10px 0;
 }
 
 @media (min-width: 768px) {
@@ -246,11 +266,6 @@ article {
         border-radius: 25px;
     }
 
-    .card-contato .content img{
-        max-width: 50%;
-        margin: 0 20px 0 0;
-    }
-
     .oferta .content .text,
     .card-opcao .content .text,
     .card-contato .content .text{
@@ -258,56 +273,14 @@ article {
         display: flex;
         flex-direction: column;
     }
-}
-
-.card-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.card-contato .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.card-contato .content img {
-    max-width: 50%;
-    height: auto;
-    margin: 0 20px;
-}
-
-.card-contato .text {
-    max-width: 50%;
-    padding: 20px;
-}
-
-.card-contato ul {
-    list-style: none;
-    padding-inline-start: 0px;
-}
-
-.card-contato li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-/* Regras para responsividade */
-@media (max-width: 768px) {
-    .card-contato {
-        flex-direction: column;
-    }
 
     .card-contato .content {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .card-contato .content img,
     .card-contato .text {
-        max-width: 100%;
+        max-width: 50%;
     }
 }
 
@@ -336,7 +309,6 @@ footer > div p {
 .textoRodape {
     font-size: 0.8rem;
 }
-
 
 .animated-fadeIn {
     opacity: 0;
