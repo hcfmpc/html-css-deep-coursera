@@ -154,6 +154,10 @@ article {
     color: #f4f4f4;
 }
 
+.card-opcao h1 {
+    text-align: center;
+}
+
 .oferta .card-promocao,
 .titulo-cardapio {
     font-family: Monospace, Verdana, sans-serif;
@@ -229,7 +233,6 @@ article {
         flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
     }
 }
 
